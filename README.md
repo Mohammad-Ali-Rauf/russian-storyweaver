@@ -1,12 +1,12 @@
-# 🎉 Russian AI Storyteller 🇷🇺
+# 🎭 Русский Сказочник (Russian Storyweaver) 🇷🇺
 
-[![Bash](https://img.shields.io/badge/Bash-4.0-blue.svg)](https://www.gnu.org/software/bash/)
+[![Bash](https://img.shields.io/badge/Bash-4.0+-blue.svg)](https://www.gnu.org/software/bash/)
 [![Ollama](https://img.shields.io/badge/Ollama-Required-orange.svg)](https://ollama.com)
 [![Python](https://img.shields.io/badge/Python-3.6%2B-yellow.svg)](https://python.org)
 [![FFmpeg](https://img.shields.io/badge/FFmpeg-Required-red.svg)](https://ffmpeg.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **AI-Powered Russian Language Learning Assistant** - Generate immersive Russian stories with translations, vocabulary, exercises, and audio narration!
+> **AI-Powered Russian Language Learning Magic** - Generate immersive Russian stories with translations, vocabulary, exercises, and native audio narration!
 
 ---
 
@@ -29,15 +29,15 @@ curl -fsSL https://ollama.com/install.sh | sh
 # 2. Pull AI model
 ollama pull infidelis/GigaChat-20B-A3B-instruct-v1.5:q4_0
 
-# 3. Download & run
-wget -O russian-story.sh https://raw.githubusercontent.com/yourusername/russian-ai-storyteller/main/russian-ai-storyteller.sh
-chmod +x russian-story.sh
+# 3. Download Русский Сказочник
+wget -O russian-storyweaver.sh https://raw.githubusercontent.com/Mohammad-Ali-Rauf/russian-storyweaver/main/russian-storyweaver.sh
+chmod +x russian-storyweaver.sh
 
 # Interactive mode (recommended for beginners)
-./russian-story.sh
+./russian-storyweaver.sh
 
 # 🎲 Surprise me! Random story
-./russian-story.sh --random
+./russian-storyweaver.sh --random
 ```
 
 ---
@@ -68,17 +68,18 @@ chmod +x russian-story.sh
 
 ---
 
-## 🎲 Surprise Me Mode!
+## 🎲 Случайная История (Surprise Me Mode!)
 
-**Can't decide? Let the AI choose for you!** The random mode combines unexpected topics with different difficulty levels for endless variety.
+**Не можете выбрать? Пусть ИИ решит за вас!** (Can't decide? Let AI choose for you!) The random mode creates unexpected combinations for endless learning variety.
 
 ```bash
 # Quick random story
-./russian-story.sh --random
+./russian-storyweaver.sh --random
 
 # From menu: Choose option 4
 ╔══════════════════════════════════════════════╗
-║           RUSSIAN AI STORYTELLER            ║
+║           РУССКИЙ СКАЗОЧНИК                 ║
+║           RUSSIAN STORYWEAVER               ║
 ╚══════════════════════════════════════════════╝
 
 🎯 CHOOSE LEVEL:
@@ -90,11 +91,13 @@ chmod +x russian-story.sh
    6. 🚪 Exit
 ```
 
-**Example random combinations:**
-- 🎨 **Art** (Advanced) - 500-word story about Russian painters
-- ⚽ **Sports** (Beginner) - Simple 150-word story about soccer
-- 💼 **Work** (Intermediate) - 300-word office story
-- ✈️ **Travel** (Advanced) - Complex travel adventure
+**Примеры случайных комбинаций:** (Example random combinations)
+- 🎨 **Искусство** (Продвинутый) - 500-word story about Russian painters
+- ⚽ **Спорт** (Начинающий) - Simple 150-word story about soccer  
+- 💼 **Работа** (Средний) - 300-word office story
+- ✈️ **Путешествие** (Продвинутый) - Complex travel adventure
+- 💖 **Любовь** (Начинающий) - Simple love story
+- 📚 **Учёба** (Средний) - Study adventure
 
 ---
 
@@ -103,28 +106,28 @@ chmod +x russian-story.sh
 ### 🎯 Direct Story Generation
 ```bash
 # Generate specific topic and level
-./russian-story.sh --topic путешествие --level intermediate
+./russian-storyweaver.sh --topic путешествие --level intermediate
 
 # 🎲 Random story (surprise me!)
-./russian-story.sh --random
+./russian-storyweaver.sh --random
 
 # Quick beginner story without audio
-./russian-story.sh --topic семья --level beginner --no-audio
+./russian-storyweaver.sh --topic семья --level beginner --no-audio
 
 # Advanced story with audio
-./russian-story.sh --topic искусство --level advanced
+./russian-storyweaver.sh --topic искусство --level advanced
 ```
 
 ### 📊 Management Commands
 ```bash
 # Show your progress statistics
-./russian-story.sh --stats
+./russian-storyweaver.sh --stats
 
-# List all generated stories
-./russian-story.sh --list-stories
+# List all generated stories  
+./russian-storyweaver.sh --list-stories
 
 # Clean generated audio files
-./russian-story.sh --clean-audio
+./russian-storyweaver.sh --clean-audio
 ```
 
 ---
@@ -169,7 +172,7 @@ Masha likes to draw pictures, and Lena helps her with paints.
    • TRUE-FALSE: Маша и Лена посмеиваются друг над другом.
    • QNA: Как часто Маша и Лена играют вместе?
 
-✅ Story saved to: /home/user/.local/share/russian-ai-stories/2025-10/story-001.json
+✅ Story saved to: /home/user/.local/share/russian-storyweaver/2025-10/story-001.json
 ```
 </details>
 
@@ -237,9 +240,10 @@ Masha likes to draw pictures, and Lena helps her with paints.
     "topic": "дружба",
     "level": "beginner", 
     "generated_date": "2025-10-08",
-    "audio_file": "/home/user/.local/share/russian-ai-stories/audio/2025-10-08-дружба-beginner.mp3",
+    "audio_file": "/home/user/.local/share/russian-storyweaver/audio/2025-10-08-дружба-beginner.mp3",
     "word_count_ru": 78,
-    "word_count_en": 82
+    "word_count_en": 82,
+    "version": "1.0.0"
   }
 }
 ```
@@ -247,7 +251,7 @@ Masha likes to draw pictures, and Lena helps her with paints.
 
 ### 🗂️ File Structure
 ```
-~/.local/share/russian-ai-stories/
+~/.local/share/russian-storyweaver/
 ├── audio/
 │   └── 2025-10-08-дружба-beginner.mp3    # 🔊 Audio file
 ├── archive/
@@ -282,7 +286,7 @@ Masha likes to draw pictures, and Lena helps her with paints.
 ## ⚙️ Configuration
 
 ### Custom AI Models:
-Edit the `AI_MODEL` variable to use your preferred model:
+Edit the `AI_MODEL` variable in the script to use your preferred model:
 ```bash
 readonly AI_MODEL="your-preferred-model"
 ```
@@ -313,11 +317,12 @@ We welcome contributions! Feel free to:
 - 💡 Suggest new features and topics  
 - 🔧 Submit pull requests
 - 📚 Improve documentation
+- 🌍 Add support for more languages
 
 ### Development:
 ```bash
-git clone https://github.com/yourusername/russian-ai-storyteller
-cd russian-ai-storyteller
+git clone https://github.com/Mohammad-Ali-Rauf/russian-storyweaver
+cd russian-storyweaver
 # Start hacking! 🚀
 ```
 
